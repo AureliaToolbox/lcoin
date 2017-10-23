@@ -72,8 +72,8 @@ const op4 = new Outpoint(
   'b7c3c4bce1a23baef2da05f9b7e4bff813449ec7e80f980ec7e4cacfadcd3314',
   300);
 
-const addr1 = new Address('bc1qmyrddmxglk49ye2wd29wefaavw7es8k5d555lx');
-const addr2 = new Address('bc1q4645ycu0l9pnvxaxnhemushv0w4cd9flkqh95j');
+const addr1 = new Address('lc1qt2fqd23zetsucrlgz6q5mn5k4ax58h2mhz34z9');
+const addr2 = new Address('lc1qane4673nzk5zq2p6mzdx7hx269h8zm9974cn43');
 
 let filter1 = null;
 let filter2 = null;

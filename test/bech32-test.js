@@ -42,7 +42,7 @@ const validChecksums = [
 
 const validAddresses = [
   [
-    'BC1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KV8F3T4',
+    'LC1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KXFLMTZ',
     Buffer.from([
       0x00, 0x14, 0x75, 0x1e, 0x76, 0xe8, 0x19, 0x91, 0x96, 0xd4, 0x54,
       0x94, 0x1c, 0x45, 0xd1, 0xb3, 0xa3, 0x23, 0xf1, 0x43, 0x3b, 0xd6
@@ -58,8 +58,7 @@ const validAddresses = [
     ])
   ],
   [
-    'bc1pw508d6qejxtdg4y5r3zarvary0c5xw7kw50'
-    + '8d6qejxtdg4y5r3zarvary0c5xw7k7grplx',
+    'lc1pw508d6qejxtdg4y5r3zarvary0c5xw7kw508d6qejxtdg4y5r3zarvary0c5xw7kuux628',
     Buffer.from([
       0x81, 0x28, 0x75, 0x1e, 0x76, 0xe8, 0x19, 0x91, 0x96, 0xd4, 0x54,
       0x94, 0x1c, 0x45, 0xd1, 0xb3, 0xa3, 0x23, 0xf1, 0x43, 0x3b, 0xd6,
@@ -68,13 +67,13 @@ const validAddresses = [
     ])
   ],
   [
-    'BC1SW50QA3JX3S',
+    'LC1SW50QM0R9V8',
     Buffer.from([
       0x90, 0x02, 0x75, 0x1e
     ])
   ],
   [
-    'bc1zw508d6qejxtdg4y5r3zarvaryvg6kdaj',
+    'lc1zw508d6qejxtdg4y5r3zarvaryvgsp6x6',
     Buffer.from([
       0x82, 0x10, 0x75, 0x1e, 0x76, 0xe8, 0x19, 0x91, 0x96, 0xd4, 0x54,
       0x94, 0x1c, 0x45, 0xd1, 0xb3, 0xa3, 0x23
@@ -144,7 +143,7 @@ describe('Bech32', function() {
 
   for (const [addr, script] of validAddresses) {
     it(`should have valid address for ${addr}`, () => {
-      let hrp = 'bc';
+      let hrp = 'lc';
       let ret = null;
 
       try {
@@ -174,7 +173,7 @@ describe('Bech32', function() {
 
   for (const addr of invalidAddresses) {
     it(`should have invalid address for ${addr}`, () => {
-      assert.throws(() => fromAddress('bc', addr));
+      assert.throws(() => fromAddress('lc', addr));
       assert.throws(() => fromAddress('tb', addr));
     });
   }
